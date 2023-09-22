@@ -1,38 +1,104 @@
-.App {
-  text-align: center;
-}
+/******
+common
+******/
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.ly_cont {
+  padding: 64px 0 80px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.ly_cont_inner {
+  max-width: 1064px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.ly_cont__col {
+  display: flex;
+  gap: 32px;
+}
+.ly_cont_main {
+  max-width: 700px;
+  flex: 1;
+}
+.ly_aside {
+  flex: 0 1 292px;
+  height: 100%;
+  position: sticky;
+  top: 100px;
+}
+.ly_lower {
+  padding-top: 80px;
+}
+.ly_lower .ly_cont {
+  padding: 40px 0 80px;
+}
+.ly_lower_mv {
+  background: url(../public/images/mv_bg.jpg) bottom center/cover no-repeat;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.ly_lower_mv::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.el_lower_headTtl {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  color: #fcfcfc;
+  gap: 8px;
 }
-
-.App-link {
-  color: #61dafb;
+.el_lower_headTtl > span {
+  font-size: 28px;
+  display: inline-block;
+  border-bottom: 1px solid #fcfcfc;
+  padding-bottom: 2px;
+  align-self: flex-start;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.el_lower_headTtl::after {
+  content: "Bookmarks";
+  font-size: 16px;
+  font-weight: normal;
+}
+.txt_bold {
+  font-weight: bold;
+}
+.txt_lg {
+  font-size: 1.25em;
+}
+@media screen and (max-width: 1023px) {
+  .ly_cont {
+      padding: 32px 0 56px;
   }
-  to {
-    transform: rotate(360deg);
+  .ly_cont__col {
+      flex-direction: column;
+  }
+  .ly_cont_main {
+      max-width: 100%;
+  }
+  .ly_aside {
+      flex: 100%;
+  }
+  .ly_archive .ly_aside {
+      order: 1;
+      position: static;
+  }
+  .ly_archive .ly_cont_main {
+      order: 2;
+  }
+  .ly_lower {
+      padding-top: 60px;
+  }
+  .el_lower_headTtl > span {
+      font-size: 24px;
+  }
+  .el_lower_headTtl::after {
+      font-size: 14px;
   }
 }

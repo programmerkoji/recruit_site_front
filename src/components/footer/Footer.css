@@ -1,0 +1,25 @@
+.ly_foot {
+  background: #505050;
+}
+.bl_foot_copyright {
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #4d5fc3;
+  color: #fff;
+  font-size: 14px;
+}
+@media screen and (max-width: 767px) {
+  .bl_foot {
+      display: block;
+  }
+  .bl_foot_logo {
+      font-size: 32px;
+      width: 100%;
+      margin-bottom: 16px;
+  }
+  .bl_footNav {
+      width: 100%;
+  }
+}
