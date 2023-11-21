@@ -1,6 +1,6 @@
 import "./Header.css";
 
-const Header = () => {
+export const Header = () => {
 	return (
 		<header className="ly_head">
 			<div className="ly_cont_inner bl_head">
@@ -49,5 +49,3 @@ const Header = () => {
 		</header>
 	);
 };
-
-export default Header;

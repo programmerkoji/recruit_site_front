@@ -1,6 +1,6 @@
-import React from "react";
+import "./Footer.css";
 
-const Footer = () => {
+export const Footer = () => {
 	return (
 		<footer className="ly_foot">
 			<div className="bl_foot_copyright">
@@ -9,5 +9,3 @@ const Footer = () => {
 		</footer>
 	);
 };
-
-export default Footer;
